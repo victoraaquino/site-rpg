@@ -1,30 +1,53 @@
 ﻿<html>
 <meta charset-"utf-8">
-	<head>
-		<title>Cadastro</title>
-		<h1 style="color:green;">Organização</h1>
-		<p style="color:green;">Você é Mestre, Jogador, Espectador?</p>
-		<select id="slc_organizacao">
-			<option>Selecione</option>
-			<option>Mestre</option>
-			<option>Jogador</option>
-			<option>Espectador</option>
-		</select>
-		<br></br>
-		
-	</head>
 
-	<body>
-		<img src="fundomestre-cadastro.png" height="10%" width="10%"></>
-		<h2 style="color:black;">Mestre**</h2>
-		<p style="color:black;">Escreva a campanha</p>
-		<br></br>
-		<script>
-			//codigo javascript
-			const opcao = document.getElementById('slc_organizacao');
-			opcao.addEventListener('change', () => {
-				const is
-			})
-		</script>
-	</body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Xablau Code | Cadastro</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+	<link rel="stylesheet" href="css/cadastro.css">
+	<link rel="stylesheet" href="css/bootstrap-4.5.0-dist/css/bootstrap.css">
+</head>
+
+<body class="bg-dark">
+	<div class="card bg-light position-absolute">
+		<div class="card-body">
+			<label>Vai jogar do q?</label>
+			<select class="form-control mb-3" id="tipo_jogador">
+				<option value="0">Selecione</option>
+				<option value="mestre">Mestre</option>
+				<option value="jogador">Jogador</option>
+				<option value="espectador">Espectador</option>
+			</select>
+			<label>Nome*</label>
+			<input type="text" class="form-control mb-3" placeholder="nome da vida real" />
+			<label>Sobrenome*</label>
+			<input type="text" class="form-control mb-3" placeholder="sobrenome da vida real" />
+			<label id="lbl_personagem">Nome Personagem*</label>
+			<input type="text" class="form-control mb-3" placeholder="nome da vida real" id="txt_personagem" />
+			<button class="btn btn-primary btn-block mt-3">
+				Cadastrar
+			</button>
+		</div>
+	</div>
+
+	<script>
+		const options = document.getElementById("tipo_jogador");
+		const txtPersonagem = document.getElementById("txt_personagem");
+		const lblPersonagem = document.getElementById("lbl_personagem");
+
+		options.addEventListener("change", () => {
+			if (options.value == "mestre") {
+				txtPersonagem.style.display = "none";
+				lblPersonagem.style.display = "none";
+			}
+			if (options.value == "jogador") {
+				txtPersonagem.style.display = "inline";
+				lblPersonagem.style.display = "inline";
+			}
+		});
+	</script>
+</body>
+
 </html>

@@ -1,0 +1,40 @@
+@font-face {
+    font-family: enchanted;
+    src: url("../fonts/enchanted_land.otf") format("opentype");
+}
+
+body {
+    width: 50%;
+    max-width: 800px;
+    margin: auto;
+    background: url(../img/rpgback2.jpg) center;
+    font-family: 'verdana';
+    line-height: 1.5;
+    color: #fff;
+}
+
+.main {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px 40px;
+    margin: 20px auto 20px auto;
+    border-radius: 50px;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo>img {
+    width: 60%;
+}
+
+.rpg-name {
+    text-align: center;
+    font-family: 'enchanted';
+    font-size: 50px;
+}
+
+.data {
+    margin: 30px 0;
+    text-align: center;
+}
