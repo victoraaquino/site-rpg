@@ -1,0 +1,8 @@
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Espectador</title>
+	<h1>(chat)</h1>
+
+</head>
+</html>
