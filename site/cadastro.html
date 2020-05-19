@@ -13,19 +13,19 @@
 <body class="bg-dark">
 	<div class="card bg-light position-absolute">
 		<div class="card-body">
-			<label>Vai jogar do q?</label>
+			<label>Obrigatório*</label>
 			<select class="form-control mb-3" id="tipo_jogador">
-				<option value="0">Selecione</option>
+				<option value="selecione">Selecione</option>
 				<option value="mestre">Mestre</option>
 				<option value="jogador">Jogador</option>
 				<option value="espectador">Espectador</option>
 			</select>
-			<label>Nome*</label>
-			<input type="text" class="form-control mb-3" placeholder="nome da vida real" />
-			<label>Sobrenome*</label>
-			<input type="text" class="form-control mb-3" placeholder="sobrenome da vida real" />
+			<label id="lbl_nome">Nome*</label>
+			<input type="text" class="form-control mb-3" placeholder="nome da vida real" id="txt_nome" />
+			<label id="lbl_sobrenome">Sobrenome*</label>
+			<input type="text" class="form-control mb-3" placeholder="sobrenome da vida real" id="txt_sobrenome" />
 			<label id="lbl_personagem">Nome Personagem*</label>
-			<input type="text" class="form-control mb-3" placeholder="nome da vida real" id="txt_personagem" />
+			<input type="text" class="form-control mb-3" placeholder="nome do personagem" id="txt_personagem" />
 			<button class="btn btn-primary btn-block mt-3">
 				Cadastrar
 			</button>
@@ -36,15 +36,43 @@
 		const options = document.getElementById("tipo_jogador");
 		const txtPersonagem = document.getElementById("txt_personagem");
 		const lblPersonagem = document.getElementById("lbl_personagem");
+		const lblSobrenome = document.getElementById("lbl_sobrenome");
+		const txtSobrenome = document.getElementById("txt_sobrenome");
+		const lblNome = document.getElementById("lbl_nome");
+		const txtNome = document.getElementById("txt_nome");
 
 		options.addEventListener("change", () => {
+			if (options.value == "selecione") {
+				txtPersonagem.style.display = "none";
+				lblPersonagem.style.display = "none";
+				lblSobrenome.style.display = "none";
+				txtSobrenome.style.display = "none";
+				lblNome.style.display = "none";
+				txtNome.style.display = "none";
+			}
 			if (options.value == "mestre") {
 				txtPersonagem.style.display = "none";
 				lblPersonagem.style.display = "none";
+				lblSobrenome.style.display = "inline";
+				txtSobrenome.style.display = "inline";
+				lblNome.style.display = "inline";
+				txtNome.style.display = "inline";
 			}
 			if (options.value == "jogador") {
 				txtPersonagem.style.display = "inline";
 				lblPersonagem.style.display = "inline";
+				lblSobrenome.style.display = "inline";
+				txtSobrenome.style.display = "inline";
+				lblNome.style.display = "inline";
+				txtNome.style.display = "inline";
+			}
+			if (options.value == "espectador") {
+				txtPersonagem.style.display = "none";
+				lblPersonagem.style.display = "none";
+				lblSobrenome.style.display = "none";
+				txtSobrenome.style.display = "none";
+				lblNome.style.display = "inline";
+				txtNome.style.display = "inline";
 			}
 		});
 	</script>
