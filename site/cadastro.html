@@ -28,20 +28,7 @@
 			<input type="text" class="form-control mb-3" placeholder="nome do personagem" id="txt_personagem" />
 			<label id="lbl_campanha">Campanha*</label>
 			<input type="text" class="form-control mb-3" placeholder="Se ja poussui digite 'Definido'" id="txt_campanha" />
-			<label>Raça*</label>
-			<select class="form-control mb-3" id="tipo_raça">
-				<option>Selecione</option>
-				<option>Humano</option>
-				<option>Nekos</option>
-				<option>Elfo</option>
-				<option>Dark elf's</option>
-				<option>Dwarf</option>
-				<option>Half-dragons</option>
-				<option>Tritões</option>
-				<option>Fada</option>
-				<option>Vampiro</option>
-			</select>
-			<label>Classe*</label>
+			<label id="lbl_classe">Classe*</label>
 			<select class="form-control mb-3" id="tipo_classe">
 				<option>Selecione</option>
 				<option>Espadachim</option>
@@ -54,9 +41,17 @@
 				<option>Bruxo</option>
 				<option>Animago</option>
 				<option>Caçador</option>
-				<option>Ligthsaber</option>
-				<option>Ceifeiro</option>
 			</select>
+			<label id="lbl_itens">Itens*</label>
+			<input type="text" class="form-control mb-3" placeholder="Itens iniciais" id="txt_itens" />
+			<label id="lbl_skills">Habilidades*</label>
+			<input type="text" class="form-control mb-3" placeholder="Habilidades iniciais" id="txt_skills" />
+			<h6>Dinheiro Fixo Inicialmente para Jogador</h6>
+			<p>Platina: 0</P>
+			<p>Ouro: 110</P>
+			<p>Electro: 0</P>
+			<p>Prata: 0</p>
+			<p>Cobre: 0</p>
 			<button class="btn btn-primary btn-block mt-3">
 				Cadastrar
 			</button>
@@ -73,6 +68,12 @@
 		const txtNome = document.getElementById("txt_nome");
 		const lblCampanha = document.getElementById("lbl_campanha");
 		const txtCampanha = document.getElementById("txt_campanha");
+		const lblClasse = document.getElementById("lbl_classe");
+		const lblItens = document.getElementById("lbl_itens");
+		const lblSkills = document.getElementById("lbl_skills");
+		const txtClasse = document.getElementById("tipo_classe");
+		const txtItens = document.getElementById("txt_itens");
+		const txtSkills = document.getElementById("txt_skills");
 
 		options.addEventListener("change", () => {
 			if (options.value == "selecione") {
@@ -84,6 +85,12 @@
 				txtNome.style.display = "none";
 				lblCampanha.style.display = "none";
 				txtCampanha.style.display = "none";
+				lblClasse.style.display = "none";
+				txtClasse.style.display = "none";
+				lblItens.style.display = "none";
+				txtItens.style.display = "none";
+				lblSkills.style.display = "none";
+				txtSkills.style.display = "none";
 			}
 			if (options.value == "mestre") {
 				txtPersonagem.style.display = "none";
@@ -94,6 +101,12 @@
 				txtNome.style.display = "inline";
 				lblCampanha.style.display = "inline";
 				txtCampanha.style.display = "inline";
+				lblClasse.style.display = "none";
+				txtClasse.style.display = "none";
+				lblItens.style.display = "none";
+				txtItens.style.display = "none";
+				lblSkills.style.display = "none";
+				txtSkills.style.display = "none";
 			}
 			if (options.value == "jogador") {
 				txtPersonagem.style.display = "inline";
@@ -104,6 +117,12 @@
 				txtNome.style.display = "inline";
 				lblCampanha.style.display = "none";
 				txtCampanha.style.display = "none";
+				lblClasse.style.display = "inline";
+				txtClasse.style.display = "inline";
+				lblItens.style.display = "inline";
+				txtItens.style.display = "inline";
+				lblSkills.style.display = "inline";
+				txtSkills.style.display = "inline";
 			}
 			if (options.value == "espectador") {
 				txtPersonagem.style.display = "none";
@@ -114,6 +133,12 @@
 				txtNome.style.display = "inline";
 				lblCampanha.style.display = "none";
 				txtCampanha.style.display = "none";
+				lblClasse.style.display = "none";
+				txtClasse.style.display = "none";
+				lblItens.style.display = "none";
+				txtItens.style.display = "none";
+				lblSkills.style.display = "none";
+				txtSkills.style.display = "none";
 			}
 		});
 	</script>
